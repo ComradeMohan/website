@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>My website</title>
+        <link rel="icon" href="logo.png" type="image/x-icon">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: rgb(42, 35, 46);
+                color:rgba(255, 255, 255, 0.804);
+                font-family: 'outfit', sans-serif;
+            }
+            .header-container{
+                background:#141414;
+                display: flex;
+                padding: 0;
+                align-items: center;
+                justify-content:space-between;
+                position: sticky;                top:0; /* header become constant */
+                box-shadow: 0 4px 17px #b7b2b0;
+                /* z-index: 1; */
+                
+            }
+
+            .logo{
+                opacity: 1;
+                width:5%;
+                padding:1%;
+                
+                animation: leftside 1s ease forwards;
+                }
+
+            ul{
+                display:flex;
+                gap:2rem;
+                list-style-type:none;
+                padding-right: 5%;
+            }
+            li{
+                font-weight:600;
+                font-size:1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            li a{
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                animation: navani .4s ease forwards;
+                opacity: 0;
+                animation-delay:calc(.15s * var(--navAni))
+            }
+            @keyframes navani
+            {
+                0%
+                {
+                    transform:translateY(30px);
+                    opacity: 0;
+                }
+                100%
+                {
+                    transform:translateY(0);
+                    opacity: 1;
+                }
+            }
+            li a::before{
+                position: absolute;
+                left:0;
+                bottom:0;
+                height:2px;
+                width: 50%;
+                background: white;
+
+            }
+
+            li a.active,li a:hover
+            {
+                color:#f9532d;
+            }
+
+            @media only screen and (max-width: 700px)  /* mobile devices*/
+            {
+                .logo{
+                    width:10%;
+                }
+                .profile
+                header li
+                {
+                    display:none;
+                }
+                .profile
+                {
+                    width:99%;
+                }
+                p
+                {
+                    padding-right:15%;
+                }
+
+            }
+            .profile
+            {
+                border-radius:50%;
+            }
+            
+            .Home
+            {
+                
+                align-items: center;
+                padding: 5%;
+            }
+            @media only screen  and (min-width: 500px){
+                .Home
+                {
+                    display: flex;
+                }
+                
+            }
+        .hi
+            {
+                font-size:2.5rem;
+
+            }
+            
+
+            .wrapper h1{
+                /* -webkit-text-stroke: .2px #fff; */
+                color:whitesmoke;
+                font-size:2.1rem;
+                overflow:hidden;
+            }
+            p
+            {
+                padding-right:20%;
+            }
+            .wrapper
+            {
+                display:block;
+            }
+            .dynamic-text span{
+                position: relative;
+            }
+            .dynamic-text  span::after
+            {
+                content: "";
+                position: absolute;
+                left:1px;
+                height: 100%;
+                width: 100%;
+                border-left: 2px solid #f9532d;
+               animation: typing 2.5s steps(13) infinite;
+               background:rgb(42, 35, 46) ;
+               /* overflow: hidden; */
+               right:1;
+            }
+            @keyframes typing
+            {
+                100%
+                {
+                    left:100%;
+                    overflow: hidden;
+
+                }
+            }
+
+
+            /* MENU */
+            label{
+                cursor: default;
+            }
+            @media screen and (max-width:500px){
+                .header-bar{
+                    display: none;
+                }
+                .menu
+                {
+                    display: block;
+                    font-size:1.5rem;
+                    font-weight: bold;
+                    color:#f9532d;
+
+                }
+                
+            .bx
+            {
+                font-family: boxicons!important;
+                font-weight: 400;
+                font-style:normal;
+                font-variant: normal;
+                line-height: 1;
+                text-rendering: auto;
+                display: inline-block;
+                text-transform: none;
+                speak: none;
+                -webkit-font-smoothing: antiliased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            .bx-menu:before{
+                content: "\eb5f";
+            }
+            }
+            .main .name
+            {
+                opacity: 0;
+                animation: leftside 1s ease forwards;
+                animation-delay: .2s;
+            }
+            @keyframes leftside{
+                0%
+                {
+                    opacity:0;
+                    transform: translateX(-100px);
+                }
+                100%{
+                    opacity:1;
+                    transform: translate(0px);
+                }
+            }
+            .name{
+                font-size: 3rem;
+            /* }
+            .p-ani
+            {
+                animation: leftside 1s ease forwards;
+            } */
+        </style>
+        
+    </head>
+    <body>
+        <header class="header-container">
+            <img src="logo.png" alt="logo" class="logo">
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul class="header-bar">
+                
+                <li class="header-bar-text" > <a href="#" class="active" style="--navAni:1"> Home </a> </li>
+
+                <li class="header-bar-text" ><a href="#" style="--navAni:2">About</a></li>
+
+                <li class="header-bar-text" ><a href="#" style="--navAni:3">Certifications</a></li>
+                
+                <li class="header-bar-text" ><a href="#" style="--navAni:4">Contact Me</a></li>
+            </ul>
+        </header>
+        <section class="Home">
+            <a href="#">
+        <img src="Hero.png" alt="image" class="profile">
+             </a>
+        <div class="home-text">
+            <h3> Hi I'm             </h3>
+            <div class="main">
+           <h1 class="name"> <span style="color: #f9532d;">Mohan</span></h1>
+             <div class="wrapper">
+                    <h1 class="dynamic-text"> <span>Web Developer .</span></h1>
+            </div>  
+            <div class="p-ani">  
+            <p>I'm a  Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by web development solutions</p>
+        </div>   
+                    </div>
+    </section>
+    </body>
+</html>
