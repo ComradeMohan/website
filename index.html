@@ -3,270 +3,453 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>My website</title>
-        <link rel="icon" href="logo.png" type="image/x-icon">
-        <style>
-            *{
-                margin:0;
-                padding:0;
-                scroll-behavior: smooth;
-            }
-            body{
-                background-color: rgb(42, 35, 46);
-                color:rgba(255, 255, 255, 0.804);
-                font-family: 'outfit', sans-serif;
-            }
-            .header-container{
-                background:#141414;
-                display: flex;
-                padding: 0;
-                align-items: center;
-                justify-content:space-between;
-                position: sticky;                top:0; /* header become constant */
-                box-shadow: 0 4px 17px #b7b2b0;
-                /* z-index: 1; */
-                
-            }
+        <title>MOHAN</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-            .logo{
-                opacity: 1;
-                width:5%;
-                padding:1%;
-                
-                animation: leftside 1s ease forwards;
-                }
+        <link rel="icon" href="https://lh3.googleusercontent.com/drive-viewer/AKGpihbTS1dJAy56i2Z3L0F1Cj3QMhfeG1gsxsRLJOhAp7PPkp6lnbVvvWGVRTis58qI9OF9iDuCTub9UT406vkvrmYQ6-VLJqCIPss=s2560" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
 
-            ul{
-                display:flex;
-                gap:2rem;
-                list-style-type:none;
-                padding-right: 5%;
-            }
-            li{
-                font-weight:600;
-                font-size:1rem;
-                font-family: Arial, Helvetica, sans-serif;
-                
-            }
-            li a{
-                display: inline-block;
-                text-decoration: none;
-                color: white;
-                text-transform: uppercase;
-                animation: navani .4s ease forwards;
-                opacity: 0;
-                animation-delay:calc(.15s * var(--navAni))
-            }
-            @keyframes navani
-            {
-                0%
-                {
-                    transform:translateY(30px);
-                    opacity: 0;
-                }
-                100%
-                {
-                    transform:translateY(0);
-                    opacity: 1;
-                }
-            }
-            li a::before{
-                position: absolute;
-                left:0;
-                bottom:0;
-                height:2px;
-                width: 50%;
-                background: white;
-
-            }
-
-            li a.active,li a:hover
-            {
-                color:#f9532d;
-            }
-
-            @media only screen and (max-width: 700px)  /* mobile devices*/
-            {
-                .logo{
-                    width:10%;
-                }
-                .profile
-                header li
-                {
-                    display:none;
-                }
-                .profile
-                {
-                    width:99%;
-                }
-                p
-                {
-                    padding-right:15%;
-                }
-
-            }
-            .profile
-            {
-                border-radius:50%;
-            }
-            
-            .Home
-            {
-                
-                align-items: center;
-                padding: 5%;
-            }
-            @media only screen  and (min-width: 500px){
-                .Home
-                {
-                    display: flex;
-                }
-                
-            }
-        .hi
-            {
-                font-size:2.5rem;
-
-            }
-            
-
-            .wrapper h1{
-                /* -webkit-text-stroke: .2px #fff; */
-                color:whitesmoke;
-                font-size:2.1rem;
-                overflow:hidden;
-            }
-            p
-            {
-                padding-right:20%;
-            }
-            .wrapper
-            {
-                display:block;
-            }
-            .dynamic-text span{
-                position: relative;
-            }
-            .dynamic-text  span::after
-            {
-                content: "";
-                position: absolute;
-                left:1px;
-                height: 100%;
-                width: 100%;
-                border-left: 2px solid #f9532d;
-               animation: typing 2.5s steps(13) infinite;
-               background:rgb(42, 35, 46) ;
-               /* overflow: hidden; */
-               right:1;
-            }
-            @keyframes typing
-            {
-                100%
-                {
-                    left:100%;
-                    overflow: hidden;
-
-                }
-            }
-
-
-            /* MENU */
-            label{
-                cursor: default;
-            }
-            @media screen and (max-width:500px){
-                .header-bar{
-                    display: none;
-                }
-                .menu
-                {
-                    display: block;
-                    font-size:1.5rem;
-                    font-weight: bold;
-                    color:#f9532d;
-
-                }
-                
-            .bx
-            {
-                font-family: boxicons!important;
-                font-weight: 400;
-                font-style:normal;
-                font-variant: normal;
-                line-height: 1;
-                text-rendering: auto;
-                display: inline-block;
-                text-transform: none;
-                speak: none;
-                -webkit-font-smoothing: antiliased;
-                -moz-osx-font-smoothing: grayscale;
-            }
-            .bx-menu:before{
-                content: "\eb5f";
-            }
-            }
-            .main .name
-            {
-                opacity: 0;
-                animation: leftside 1s ease forwards;
-                animation-delay: .2s;
-            }
-            @keyframes leftside{
-                0%
-                {
-                    opacity:0;
-                    transform: translateX(-100px);
-                }
-                100%{
-                    opacity:1;
-                    transform: translate(0px);
-                }
-            }
-            .name{
-                font-size: 3rem;
-            /* }
-            .p-ani
-            {
-                animation: leftside 1s ease forwards;
-            } */
-        </style>
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jaini&family=Jaini+Purva&family=Pacifico&display=swap" rel="stylesheet">
     </head>
+    <style>
+      .logo-text{
+        font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+      }
+    </style>
     <body>
-        <header class="header-container">
-            <img src="logo.png" alt="logo" class="logo">
-            <label for="click" class="mainicon">
-                <div class="menu">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </label>
-            <ul class="header-bar">
-                
-                <li class="header-bar-text" > <a href="#" class="active" style="--navAni:1"> Home </a> </li>
-
-                <li class="header-bar-text" ><a href="#" style="--navAni:2">About</a></li>
-
-                <li class="header-bar-text" ><a href="#" style="--navAni:3">Certifications</a></li>
-                
-                <li class="header-bar-text" ><a href="#" style="--navAni:4">Contact Me</a></li>
-            </ul>
-        </header>
-        <section class="Home">
+      <!-- TOGGLE FOR MOBILE DEVICES -->
+      <img style="width: 20px;" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYfLxrXr6y7u0b-0qGkwvcWIPocSNvO2oHewzp-l-6kyzcq8bwL1LVDCkO5JWqzqpOKtLd7wGR9dAr-L_4mVbAWhdn0NCigrsA=s2560" alt="tooglemobile" id="togglemobile">
+      <!-- LOADER  -->
+      <!-- <div class="loading-page">
+            <svg id="svg" width="61" height="69" viewBox="0 0 61 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.617188 69V25.6406H1.49609L14.3867 56.5977V69H0.617188ZM0.617188 9.625V0.640625H11.3594L30.0117 45.8555L40.3633 22.5156H41.3398V54.2539L34.7969 69H25.3242L0.617188 9.625ZM46.6133 69V0.640625H60.3828V69H46.6133Z" fill="white"/>
+          </svg>
+          <div class="name-container">
+              <div class="logo-name">MOHAN</div>
+          </div>
+      </div> -->
+      <!-- NAV BAR  -->
+      <nav class="header-container">
+          <!-- LOGO -->
+          <div class="logo-container">
             <a href="#">
-        <img src="Hero.png" alt="image" class="profile">
+              <svg  width="100" height="50" viewBox="0 0 30888 6809" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9175.22 2523.39C9175.22 2603.18 9171.29 2682.1 9163.59 2760H9164.03L9167 3951H9168.76C9168.76 4179.17 9087.7 4397.99 8943.42 4559.32C8799.13 4720.66 8603.43 4811.3 8399.38 4811.3C8195.33 4811.3 7999.63 4720.66 7855.35 4559.32C7711.48 4398.46 7630.47 4180.44 7630 3953H7629V2760.48H7627.89V2682.7V2682.63C7627.88 2527.31 7598.56 2373.52 7541.61 2230.02C7484.64 2086.51 7401.15 1956.11 7295.9 1846.27C7190.65 1736.43 7065.69 1649.3 6928.17 1589.85C6790.65 1530.4 6643.26 1499.81 6494.41 1499.81C6345.56 1499.81 6198.16 1530.4 6060.64 1589.85C5923.12 1649.3 5798.17 1736.43 5692.91 1846.27C5587.66 1956.11 5504.17 2086.51 5447.21 2230.02C5390.25 2373.52 5360.93 2527.31 5360.93 2682.63V2682.7V2833.87H5362.13V6063.45H3814.7V4810.68L3814.61 4810.72V2700.68H1599.66V4833.14L1599.45 4833.05V6068.19V6072.75H1599.43C1597.92 6239.49 1513.83 6399.13 1365.21 6517.12C1215.24 6636.18 1011.82 6703.07 799.723 6703.07C587.623 6703.07 384.211 6636.18 234.233 6517.12C85.6112 6399.13 1.52768 6239.49 0.0206149 6072.75H0V6068.19V2764.95H12.1248C4.1029 2685.45 0 2604.87 0 2523.39C0 1129.76 1200.29 1.08531e-05 2680.91 1.08531e-05C3426.84 1.08531e-05 4101.62 286.741 4587.61 749.505C5073.6 286.741 5748.38 0 6494.31 0C7974.93 0 9175.22 1129.76 9175.22 2523.39ZM3814.61 2700.55C3814.61 2542.86 3785.96 2386.73 3730.31 2241.04C3674.65 2095.36 3593.08 1962.99 3490.24 1851.5C3387.4 1740 3265.31 1651.55 3130.95 1591.21C2996.58 1530.86 2852.57 1499.81 2707.13 1499.81C2561.7 1499.81 2417.69 1530.86 2283.32 1591.21C2148.96 1651.55 2026.87 1740 1924.03 1851.5C1821.19 1962.99 1739.62 2095.36 1683.96 2241.04C1628.3 2386.73 1599.66 2542.86 1599.66 2700.55L2707.13 2700.55H3814.61ZM5362.13 6063.59C5362.13 6230.75 5280.61 6391.06 5135.51 6509.26C4990.41 6627.46 4793.61 6693.86 4588.41 6693.86C4383.21 6693.86 4186.41 6627.46 4041.31 6509.26C3896.21 6391.06 3814.7 6230.75 3814.7 6063.59H4588.41H5362.13ZM8425.5 6703C8839.44 6703 9175 6367.44 9175 5953.5C9175 5539.56 8839.44 5204 8425.5 5204C8011.56 5204 7676 5539.56 7676 5953.5C7676 6367.44 8011.56 6703 8425.5 6703Z" fill="#D852E3"/>
+              <path d="M9175 5953.5C9175 6367.44 8839.44 6703 8425.5 6703C8011.56 6703 7676 6367.44 7676 5953.5C7676 5539.56 8011.56 5204 8425.5 5204C8839.44 5204 9175 5539.56 9175 5953.5Z" fill="#D852E3"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13294.5 6132.84C14314.8 5660.34 15034.4 4517.37 15034.4 3182.41C15034.4 1424.81 13787 0 12248.2 0C10709.4 0 9462 1424.81 9462 3182.41C9462 4476.52 10138.3 5590.22 11109.2 6087.6V2910.69V2901.21H11109.2C11110.1 2703.87 11138.3 2508.59 11192.2 2326.21C11247.1 2140.91 11327.5 1972.54 11428.8 1830.72C11530.2 1688.89 11650.5 1576.39 11782.9 1499.64C11915.3 1422.88 12057.2 1383.38 12200.5 1383.38C12343.9 1383.38 12485.8 1422.88 12618.2 1499.64C12750.6 1576.39 12870.9 1688.89 12972.3 1830.71C13073.6 1972.54 13154 2140.91 13208.8 2326.21C13262.8 2508.59 13291 2703.86 13291.9 2901.21H13294.5V6132.84Z" fill="#D852E3"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13295 570.159C14315.4 1042.66 15035 2185.64 15035 3520.59C15035 5278.19 13787.6 6703 12248.8 6703C10710 6703 9462.57 5278.19 9462.57 3520.59C9462.57 2226.48 10138.8 1112.78 11109.7 615.396V3951.34V3960.81H11109.8C11110.6 4158.16 11138.8 4353.43 11192.8 4535.81C11247.7 4721.11 11328.1 4889.48 11429.4 5031.31C11530.7 5173.13 11651.1 5285.63 11783.5 5362.39C11915.9 5439.14 12057.8 5478.65 12201.1 5478.65C12344.4 5478.65 12486.4 5439.14 12618.8 5362.39C12751.2 5285.63 12871.5 5173.13 12972.8 5031.31C13074.2 4889.48 13154.6 4721.12 13209.4 4535.81C13263.4 4353.43 13291.6 4158.16 13292.5 3960.81H13295V570.159Z" fill="#D852E3"/>
+              <rect x="15322" y="94" width="1593" height="6624" rx="745" fill="#D852E3"/>
+              <rect x="18842" y="94" width="1492.26" height="6624" rx="745" fill="#D852E3"/>
+              <circle cx="17878.5" cy="3405.5" r="749.5" fill="#D852E3"/>
+              <mask id="path-8-inside-1_50_52" fill="white">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23906.4 4526.06C24693.6 4148.08 25239 3327.24 25239 2375.51C25239 1065.21 24205.2 3 22930 3C21654.8 3 20621 1065.21 20621 2375.51C20621 3345.34 21187.3 4179.25 21998.7 4547.14V2598.61H23906.4V4526.06ZM23906.4 2598.48C23906.4 2450.23 23881.8 2303.42 23833.8 2166.45C23785.9 2029.48 23715.6 1905.03 23627.1 1800.2C23538.5 1695.36 23433.3 1612.21 23317.6 1555.47C23201.9 1498.74 23077.8 1469.54 22952.6 1469.54C22827.3 1469.54 22703.3 1498.74 22587.6 1555.47C22471.8 1612.21 22366.7 1695.36 22278.1 1800.2C22189.5 1905.03 22119.3 2029.48 22071.4 2166.45C22023.4 2303.42 21998.7 2450.23 21998.7 2598.48L22952.6 2598.48H23906.4Z"/>
+              </mask>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23906.4 4526.06C24693.6 4148.08 25239 3327.24 25239 2375.51C25239 1065.21 24205.2 3 22930 3C21654.8 3 20621 1065.21 20621 2375.51C20621 3345.34 21187.3 4179.25 21998.7 4547.14V2598.61H23906.4V4526.06ZM23906.4 2598.48C23906.4 2450.23 23881.8 2303.42 23833.8 2166.45C23785.9 2029.48 23715.6 1905.03 23627.1 1800.2C23538.5 1695.36 23433.3 1612.21 23317.6 1555.47C23201.9 1498.74 23077.8 1469.54 22952.6 1469.54C22827.3 1469.54 22703.3 1498.74 22587.6 1555.47C22471.8 1612.21 22366.7 1695.36 22278.1 1800.2C22189.5 1905.03 22119.3 2029.48 22071.4 2166.45C22023.4 2303.42 21998.7 2450.23 21998.7 2598.48L22952.6 2598.48H23906.4Z" fill="#D852E3"/>
+              <path d="M23906.4 4526.06H23905.4V4527.65L23906.9 4526.96L23906.4 4526.06ZM21998.7 4547.14L21998.3 4548.05L21999.7 4548.69V4547.14H21998.7ZM21998.7 2598.61V2597.61H21997.7V2598.61H21998.7ZM23906.4 2598.61H23907.4V2597.61H23906.4V2598.61ZM23833.8 2166.45L23832.9 2166.78L23832.9 2166.78L23833.8 2166.45ZM23906.4 2598.48V2599.48H23907.4V2598.48H23906.4ZM23627.1 1800.2L23627.8 1799.55L23627.8 1799.55L23627.1 1800.2ZM23317.6 1555.47L23318 1554.57L23318 1554.57L23317.6 1555.47ZM22587.6 1555.47L22588 1556.37L22588 1556.37L22587.6 1555.47ZM22278.1 1800.2L22278.9 1800.84L22278.9 1800.84L22278.1 1800.2ZM22071.4 2166.45L22072.3 2166.78L22072.3 2166.78L22071.4 2166.45ZM21998.7 2598.48H21997.7V2599.48L21998.7 2599.48L21998.7 2598.48ZM22952.6 2598.48L22952.6 2597.48H22952.6L22952.6 2598.48ZM25238 2375.51C25238 3326.85 24692.8 4147.35 23906 4525.16L23906.9 4526.96C24694.4 4148.82 25240 3327.63 25240 2375.51H25238ZM22930 4C24204.6 4 25238 1065.73 25238 2375.51H25240C25240 1064.68 24205.8 2 22930 2V4ZM20622 2375.51C20622 1065.73 21655.4 4 22930 4V2C21654.2 2 20620 1064.68 20620 2375.51H20622ZM21999.2 4546.23C21188.1 4178.5 20622 3344.94 20622 2375.51H20620C20620 3345.73 21186.6 4180 21998.3 4548.05L21999.2 4546.23ZM21997.7 2598.61V4547.14H21999.7V2598.61H21997.7ZM23906.4 2597.61H21998.7V2599.61H23906.4V2597.61ZM23907.4 4526.06V2598.61H23905.4V4526.06H23907.4ZM23832.9 2166.78C23880.8 2303.64 23905.4 2450.34 23905.4 2598.48H23907.4C23907.4 2450.12 23882.7 2303.2 23834.8 2166.12L23832.9 2166.78ZM23626.3 1800.84C23714.8 1905.58 23785 2029.92 23832.9 2166.78L23834.8 2166.12C23786.8 2029.04 23716.5 1904.48 23627.8 1799.55L23626.3 1800.84ZM23317.2 1556.37C23432.8 1613.04 23537.8 1696.11 23626.3 1800.84L23627.8 1799.55C23539.2 1694.62 23433.9 1611.37 23318 1554.57L23317.2 1556.37ZM22952.6 1470.54C23077.7 1470.54 23201.6 1499.7 23317.2 1556.37L23318 1554.57C23202.2 1497.77 23078 1468.54 22952.6 1468.54V1470.54ZM22588 1556.37C22703.6 1499.7 22827.5 1470.54 22952.6 1470.54V1468.54C22827.2 1468.54 22703 1497.78 22587.1 1554.58L22588 1556.37ZM22278.9 1800.84C22367.4 1696.11 22472.4 1613.04 22588 1556.37L22587.1 1554.58C22471.3 1611.37 22366 1694.62 22277.4 1799.55L22278.9 1800.84ZM22072.3 2166.78C22120.2 2029.92 22190.4 1905.58 22278.9 1800.84L22277.4 1799.55C22188.7 1904.48 22118.4 2029.04 22070.4 2166.12L22072.3 2166.78ZM21999.7 2598.48C21999.7 2450.34 22024.4 2303.64 22072.3 2166.78L22070.4 2166.12C22022.4 2303.2 21997.7 2450.12 21997.7 2598.48H21999.7ZM22952.6 2597.48L21998.7 2597.48L21998.7 2599.48L22952.6 2599.48L22952.6 2597.48ZM23906.4 2597.48H22952.6V2599.48H23906.4V2597.48Z" fill="black" mask="url(#path-8-inside-1_50_52)"/>
+              <path d="M20621 2450C20621 2072.24 20927.2 1766 21305 1766V1766C21682.8 1766 21989 2072.24 21989 2450V6125C21989 6502.76 21682.8 6809 21305 6809V6809C20927.2 6809 20621 6502.76 20621 6125V2450Z" fill="#D852E3"/>
+              <rect x="23916" y="1766" width="1323" height="5043" rx="661.5" fill="#D852E3"/>
+              <circle cx="22930.5" cy="3405.5" r="749.5" fill="#D852E3"/>
+              <path d="M30888 5953.5C30888 6367.44 30552.4 6703 30138.5 6703C29724.6 6703 29389 6367.44 29389 5953.5C29389 5539.56 29724.6 5204 30138.5 5204C30552.4 5204 30888 5539.56 30888 5953.5Z" fill="#D852E3"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M30876.1 2760.48C30883.9 2682.43 30887.8 2603.35 30887.8 2523.39C30887.8 1129.76 29687.5 0 28206.9 0C26726.3 0 25526 1129.76 25526 2523.39C25526 3535.77 26159.4 4408.9 27073.5 4810.86V2682.7V2682.63C27073.5 2527.31 27102.9 2373.52 27159.8 2230.02C27216.8 2086.51 27300.3 1956.11 27405.5 1846.27C27510.8 1736.43 27635.7 1649.3 27773.2 1589.85C27910.8 1530.4 28058.2 1499.81 28207 1499.81C28355.9 1499.81 28503.3 1530.4 28640.8 1589.85C28778.3 1649.3 28903.2 1736.43 29008.5 1846.27C29113.8 1956.11 29197.2 2086.51 29254.2 2230.02C29311.2 2373.52 29340.5 2527.31 29340.5 2682.63V2682.7V2760.48H30876.1Z" fill="#D852E3"/>
+              <path d="M29341 2748C29341 2336.55 29674.5 2003 30086 2003H30143C30554.5 2003 30888 2336.55 30888 2748V4066C30888 4477.45 30554.5 4811 30143 4811H30086C29674.5 4811 29341 4477.45 29341 4066V2748Z" fill="#D852E3"/>
+              <path d="M25526 2443C25526 2031.55 25859.5 1698 26271 1698H26374C26785.5 1698 27119 2031.55 27119 2443V5958C27119 6369.45 26785.5 6703 26374 6703H26271C25859.5 6703 25526 6369.45 25526 5958V2443Z" fill="#D852E3"/>
+              </svg>
+            </a>
+          </div>
+            <!-- SIDE BAR -->
+          <ul class="sidebar">
+              <!-- LIST IN SIDE BAR  -->
+                <li onclick=hideSidebar(event) >
+                  <a href="#" style="--navAni:1" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                  </a>
+                </li >
+                <li  ><a href="#Home" class="active" > Home </a> </li>
+                <li  ><a href="#about" >               About</a></li>
+                <li  ><a href="#skills" >              SKILLs</a></li>
+                <li  ><a href="#project" >             Projects</a></li>
+                <li  ><a href="#certifications" >      Certifications</a></li>
+          </ul>
+            <!-- MENU BLOCK-->
+          <ul class="header-bar">
+              <!-- NAV BAR TEXTS  -->
+               <li ><a href="#Home" class="active" style="--navAni:1"> Home </a> </li>
+               <li ><a href="#about" style="--navAni:2">About</a></li>
+               <li ><a href="#skills" style="--navAni:3">skills</a></li>
+               <li  ><a href="#project" style="--navAni:4">Projects</a></li>
+               <li ><a  href="#certifications" style="--navAni:5">Certifications</a></li>
+               <div  class="image-container">
+               <img  style="width: 20px;" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYfLxrXr6y7u0b-0qGkwvcWIPocSNvO2oHewzp-l-6kyzcq8bwL1LVDCkO5JWqzqpOKtLd7wGR9dAr-L_4mVbAWhdn0NCigrsA=s2560" alt="toogle" id="toggle">
+          </ul>
+            <!-- NAV MENU BUTTON -->
+          <li class="menu-button" onclick=showSidebar(event) >
+             <a href="#" style="--navAni:1">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+               </svg>
              </a>
+          </li>
+      </nav>
+      <section id='Home' class="Home">
+        <a href="#">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYyHmfrhXcsSC45tYFNzdothtqW7RZozRry1bsghKtafpTfYU9MRSk-sUa0aqqBi2R-UIee7ZP-Gtf2ldK7JrQmzDm53vnAMg=s2560" alt="image" class="profile">
+        </a>
         <div class="home-text">
-            <h3> Hi I'm             </h3>
-            <div class="main">
-           <h1 class="name"> <span style="color: #f9532d;">Mohan</span></h1>
-             <div class="wrapper">
-                    <h1 class="dynamic-text"> <span>Web Developer .</span></h1>
-            </div>  
-            <div class="p-ani">  
-            <p>I'm a  Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by web development solutions</p>
-        </div>   
-                    </div>
-    </section>
+          <h3> Hi I'm </h3>
+          <div class="main">
+            <h1 class="name">
+              <span style="color: #f9532d;">Mohan Reddy</span>
+            </h1>
+            <div class="wrapper">
+                <h1 class="dynamic-text"> <span>Web Developer .</span></h1>
+            </div>
+            <div class="p-ani">
+              <p>Our Main Goal to help & Satisficed the Local & Global Clients by web development solutions  </p>
+            </div>
+          </div>
+          <div class="social-buttons">
+        <a href="https://github.com/ComradeMohan" class="social-button github">
+          <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
+            <path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mohan-reddy-mmr/" class="social-button linkedin">
+          <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Icons" stroke="none" stroke-width="1">
+              <g transform="translate(-702.000000, -265.000000)">
+                <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </a>
+               
+        <a href="https://www.instagram.com/comrade_mohan666" class="social-button instagram">
+          <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1">
+              <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]">
+            </path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1GZwFhwoulfOvy5ohAp56h7nbTQL76UVW/view?usp=sharing" target="_blank">
+          <button class="download-btn pixel-corners">
+            <div class="button-content">
+              <div class="svg-container">
+                <svg class="download-icon" xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z">
+                        </path>
+                </svg>
+              </div>
+              <div class="text-container">
+                      <div class="text">RESUME</div>
+              </div>
+            </div>
+          </button>
+        </a>   
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section-about">
+       <div class="about">
+        <h1 class="animate-on-scroll" >About Me</h1> 
+        <p class="" > I'm Creative Director and Full Stack Web Developer from AP , India ,  
+         working in web development and print media.I enjoy turning complex problems into simple, 
+         beautiful and intuitive designs.
+        </p>
+        <p class="" >
+          My aim is to bring across your message and identity in the most creative way. 
+          I created web design for many famous brand companies.
+        </p>
+        <h2 class="animate-on-scroll" >What I Do !!!</h2> 
+        <div class="work">
+          <div class="workbox ">
+          <div class="icon">
+             <img src="ui.svg" alt="ui-image">
+          </div>
+          <div class="desc">
+             <h3>UI/UX Designer</h3>
+             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
+          </div>
+          </div>
+
+          <div class="workbox">
+         <div class="icon">
+            <img src="app.svg" alt="app-image">
+         </div>
+         <div class="desc">
+            <h3>App Developement</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
+         </div>
+          </div>
+
+          <div class="workbox">
+         <div class="icon">
+            <img src="api.svg" alt="api-image">
+         </div>
+         <div class="desc">
+            <h3>API Developement</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
+         </div>
+          </div>
+
+          <div class="workbox">
+         <div class="icon">
+            <img style="width: 30px;" src="web.svg" alt="web-image">
+         </div>
+         <div class="desc">
+            <h3>Web Developement</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
+         </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <section  id="skills" class="section-skills">
+      <div class="skills">
+      <h1 class="skills-header animate-on-scroll">My Skills</h1>
+      <div class="skill-boxes">
+        <div class="skills-area">
+          <div class="skill">
+            <div class="skill-title">HTML</div>
+            <div class="skill-bar"></div>
+            <div class="html skill-fill">
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">CSS</div>
+            <div class="skill-bar"></div>
+            <div class="css skill-fill">
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">JavaScript</div>
+            <div class="skill-bar"></div>
+            <div class="js skill-fill">
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">JAVA</div>
+            <div class="skill-bar"></div>
+            <div class="java skill-fill">
+              <span class="skill-percent">87%</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-area">
+          <div class="skill">
+            <div class="skill-title">Python</div>
+            <div class="skill-bar"></div>
+            <div class="python skill-fill">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Video Editing</div>
+            <div class="skill-bar"></div>
+            <div class="video skill-fill">
+              <span class="skill-percent">60%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Communiction</div>
+            <div class="skill-bar"></div>
+            <div class="Communiction skill-fill">
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-title">Data Analysis</div>
+            <div class="skill-bar"></div>
+            <div class="Data-Analysis skill-fill">
+              <span class="skill-percent">65%</span>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+      </section>
+      <section id="project">
+        <div class="project-heading">
+          <span>Let's See My Work</span>
+          <h3 class="animate-on-scroll">MY PROJECTS</h3>
+        </div>
+        <!--filter--------->
+        <ul class="portfolio-filter">
+          <li class="list portfolio-filter-active" data-filter="all">All</li>
+          <li class="list" data-filter="app">Application</li>
+          <li class="list" data-filter="appdesign">App Design</li>
+          <li class="list" data-filter="web">Website Designs</li>
+          <li class="list" data-filter="ai">AI</li>
+      </ul>
+      <!--container--------->
+      <div class="portfolio-container">
+        <!--1------------>
+        <a href="images/b-1.jpg" class="portfolio-box app" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZRKXgin-ndkxQiHHtLVbv6f9hmQiAAO5XLuhmqGXA9KJt5HcaBbPuCvb3Wyiq1ahqRQJkVuw_L3L2yAcKpb0q7yk8urAkJlf0=s1600-rw-v1">
+        </a>
+        <!--2------------>
+        <a href="" class="portfolio-box app" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbZEDOCQO6tv8pc4cJ8Mo7oXEX7PYBAj1EpE6wvjmrcImmmHqdPpmAPEclsHbbOjDDLaUyrHV0t1KlQ1uJXMC1E-oRTOR03Rg=s1600-rw-v1">
+        </a>
+        <!--3------------>
+        <a href="" class="portfolio-box appdesign" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaBAgIuxe70UhS625933o4ifY2DeBRd7I9CyY5duNniQc5N_7LgqzQD7_LYuNnmaRK2ZVLpl7HKYB8228rGVFEwX0CmD7kpaQ=s2560">
+        </a>
+        <!--4------------>
+        <a href="images/b-4.jpg" class="portfolio-box web" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZRuytEAqREpsXTF-Q8H2H7nbAaOJCOBevFV8zOBJqzuKnQxpbU6kuB0x4Uh5JwUCv4zfmY355bwDTyLilxDKHlm-qD7wynzw=s1600-rw-v1">
+        </a>
+        <!--5------------>
+        <a href="images/b-5.jpg" class="portfolio-box web" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihannuP14wzXC53oeL7Yc4ilXbCYJaYNAjhqP3sraBQMIovzQ0bCW2I_hFibAphleL9XM0o2Rj2b1TE6xOTQ7V-pL1FLSTJ7GQ=s2560">
+        </a>
+        <!--6------------>
+        <a href="https://deepchat.dev/" class="portfolio-box ai" data-lightbox="work">
+          <img alt="" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaAiIkyjk5Z8Qo300vbcae4--HytcDmnFpca15VtTa1fzJ_SpczymBb7AYC6DYyKfubZVr5z-7_XCMFVCm4G6EKwOlHxMpngnc=s2560">
+        </a>
+      </div>
+      </section>
+      <section id="certifications">
+        <div  class="section-Certifications">
+
+          <div class="card-container">
+            <div class="card">
+                <div class="img-content">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaCye7hDGChIURf3ADaVs8Wv8gdeWeKqDnld6ic2IgEKBj4Ydlf_HyvKJtlI22GxZHZl5bIw5MP8Gg_JC8IcGRzJCpd3Et32w=s1600-rw-v1" alt="Programming in Java ">
+                </div>
+              <div class="content">
+                  <p class="heading">Programming In Java</p>
+                  <p>
+                    NPTEL's Java Programming Certification, completed in October 2023, showcases my adept understanding of Java fundamentals, including object-oriented programming and data structures. 
+                  </p>
+              </div>
+            </div>      
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="img-content">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbLQdE33-D5enh3SrBtug0fy6MZG8ATaKBp7fZLBWQ9DVicxxe3rW7ZrQLNcfAccyBammbcRt0tvdHAksXtgskqp4uTBje7k0g=s1600-rw-v1">
+              </div>
+              <div class="content">
+                 <p class="heading">3D Game Programming</p>
+                 <p>
+                   NPTEL's Java Programming Certification, completed in October 2023, showcases my adept understanding of Java fundamentals, including object-oriented programming and data structures. 
+                 </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+           <div class="card">
+            <div class="img-content">
+              <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaLuwLKVt10AJjyKYH-cuRCysPSTueoZ-iciBzT_FBxbMHmnIjuo7WL8RfYiWjUeH1NWfLxe4qAZUBR1ilWUrpnauH_L0Qunow=s1600-rw-v1">
+            </div>
+            <div class="content">
+              <p class="heading">Python Programming</p>
+              <p>
+                Completed Python Programming Certification from Open Weaver on August 23, 2023. Mastery of Python fundamentals, including scripting and data manipulation, attained through comprehensive coursework. 
+              </p>
+            </div>
+          </div>
+          </div>
+      
+        
+      <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYR0WPIadN4Hv8d9ROtxib0CfCz3pN0ISunU_Nj2LSWIGphgh1KxItZtbPlmmPvZTwwl0mrFBJu_j2_1Ge86lzX9sEGU5IQR_g=s1600-rw-v1">
+        </div>
+        <div class="content">
+          <p class="heading">Intro to C++ and DSA</p>
+          <p>
+            
+            Completed 'Intro to C++ and DSA' boot camp by Google Student Developer Program in 7 days. Acquired foundational knowledge in C++ programming and Data Structures & Algorithms (DSA), preparing for advanced coding challenges.
+          </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZz7BDTV1ILtVlrzKuPwbwlzPSysbJLdP3dO0DIPrjQdumgUhEdhp32aLFaIkHANMkVbeI-BVqJ2YwBOBMXXAg_XboEkj_x8w=s2560">
+        </div>
+        <div class="content">
+          <p class="heading">Webinar On Data Structures</p>
+          <p>
+            
+            Having participated in a webinar on data structures hosted by Maang Careers, I've gained valuable insights into the intricate world of organizing and manipulating data for optimal performance.
+          </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihb7P-RC2HCH0RpPitHiCoBAi04zMV9FhKx3dbW7EE0BRXQEGtEV5WNMe-wpPTTFKudRpCJN-3Z_L__caAdN6EL7M7PJcnJ0Xw=s1600-rw-v1">
+        </div>
+        <div class="content">
+          <p class="heading">Excel Skills</p>
+          <p>
+            Acquired advanced Excel skills through the JPMorgan training program, enhancing proficiency in data analysis, modeling, and automation. Equipped with comprehensive knowledge of Excel functions, formulas, and features, I'm empowered to streamline processes and deliver actionable insights to drive informed decision-making.
+          </p>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+<script src="JQuery.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script>
+    /*blog-filter-menu----------------------------*/
+    $(document).on('click','.portfolio-filter li',function(){
+            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+        });
+        
+     /*portfolio-filter---------------------------------*/
+     $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'all'){
+                    $('.portfolio-box').show('1000');
+                }
+                else{
+                    $('.portfolio-box').not('.'+value).hide('1000');
+                    $('.portfolio-box').filter('.'+value).show('1000');
+                }
+            });
+        });
+  </script>
+</script>
     </body>
 </html>
